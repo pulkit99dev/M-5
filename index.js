@@ -2,10 +2,15 @@ const express = require("express");
 const port = 8000;
 const app = express();
 const path = require("path");
+// const expresslayouts = require('expressLa')
 
-// Setting upp view engine
+
+// Setting up view engine
 app.set("view", "ejs");
 path.join("views", "views");
+
+//Setting up router
+app.use('/', require('./routes/index'))
 
 
 
