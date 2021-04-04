@@ -6,6 +6,9 @@ const expressLayouts = require('express-ejs-layouts');
 
 app.use(express.static('./assets'))
 app.use(expressLayouts);
+// Extract styles & scripts from subpages
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 
 //Setting up router
 app.use('/', require('./routes/index'))
