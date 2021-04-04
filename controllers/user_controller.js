@@ -1,3 +1,5 @@
 module.exports.user = function(req, res){
-    return res.end('<h1>Profile Page of User</h1>')
+    return res.render('profile', {
+        title: 'Profile Page'
+    })
 }
